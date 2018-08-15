@@ -21,6 +21,9 @@
 		4A3729732122778400F9C572 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3729722122778400F9C572 /* ProfileViewController.swift */; };
 		4A37297521227DBE00F9C572 /* HJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37297421227DBE00F9C572 /* HJNavigationController.swift */; };
 		4A37297A21229CF000F9C572 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37297921229CF000F9C572 /* UIColor+Extension.swift */; };
+		AF9689A621246EB1001661CC /* HJPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A521246EB1001661CC /* HJPageView.swift */; };
+		AF9689A821246EC3001661CC /* HJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A721246EC3001661CC /* HJTitleView.swift */; };
+		AF9689AA21246ECB001661CC /* HJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A921246ECB001661CC /* HJContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		4A3729722122778400F9C572 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A37297421227DBE00F9C572 /* HJNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJNavigationController.swift; sourceTree = "<group>"; };
 		4A37297921229CF000F9C572 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		AF9689A521246EB1001661CC /* HJPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPageView.swift; sourceTree = "<group>"; };
+		AF9689A721246EC3001661CC /* HJTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTitleView.swift; sourceTree = "<group>"; };
+		AF9689A921246ECB001661CC /* HJContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		4A3729652122764E00F9C572 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF9689A221246E7D001661CC /* CustomView */,
 				4A37297821229CDC00F9C572 /* Extension */,
 				4A37296421226AD900F9C572 /* Main */,
 				4A3729662122767400F9C572 /* Home */,
@@ -200,6 +207,16 @@
 				4A37297921229CF000F9C572 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		AF9689A221246E7D001661CC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				AF9689A521246EB1001661CC /* HJPageView.swift */,
+				AF9689A721246EC3001661CC /* HJTitleView.swift */,
+				AF9689A921246ECB001661CC /* HJContentView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,9 +358,12 @@
 				4A37293721226A5800F9C572 /* AppDelegate.swift in Sources */,
 				4A37297A21229CF000F9C572 /* UIColor+Extension.swift in Sources */,
 				4A3729712122777B00F9C572 /* DiscoverViewController.swift in Sources */,
+				AF9689A621246EB1001661CC /* HJPageView.swift in Sources */,
+				AF9689AA21246ECB001661CC /* HJContentView.swift in Sources */,
 				4A3729732122778400F9C572 /* ProfileViewController.swift in Sources */,
 				4A37297521227DBE00F9C572 /* HJNavigationController.swift in Sources */,
 				4A37296B2122770500F9C572 /* RootViewController.swift in Sources */,
+				AF9689A821246EC3001661CC /* HJTitleView.swift in Sources */,
 				4A37296D2122776A00F9C572 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,6 +32,18 @@ class HomeViewController: UIViewController {
         let textField : UITextField = searchBar.value(forKey: "_searchField") as! UITextField
         textField.textColor = UIColor.white
         
+        let pageViewFrame = CGRect(x: 0, y: 64, width: self.view.frame.width, height: self.view.frame.height - 64)
+//        let titles = ["音乐", "电影", "电视剧", "专题"]
+        let titles = ["音乐音乐", "电影音乐音乐", "电视剧", "专题音乐", "音乐音乐", "电影音乐音乐", "电视剧", "专题音乐"]
+        
+        var viewControllers: [UIViewController] = [UIViewController]()
+        for i in 0..<titles.count {
+            let viewController = UIViewController()
+            viewController.view.backgroundColor = UIColor.randomColor()
+            viewControllers.append(viewController)
+        }
+        let pageView = HJPageView(frame: pageViewFrame, titles: titles, subViewControllers: viewControllers, parentViewController: self)
+        self.view.addSubview(pageView)
     }
 }
 
