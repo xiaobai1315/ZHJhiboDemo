@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol HJTitleViewDelegate : class {
+    func titleViewDidScrolled(index : Int)
+}
+
 // MARK: HJTitleViewStyle
 
 class HJTitleViewStyle {
@@ -25,6 +30,8 @@ class HJTitleView: UIView {
 
     private var titles: [String] = [String]()
     private var style: HJTitleViewStyle = HJTitleViewStyle()
+    private var currentLabel : UILabel? = nil
+    weak var delegate : HJTitleViewDelegate?
     
     //存放所有标题label的数组
     private var titleLabels: [UILabel] = {
@@ -52,6 +59,32 @@ class HJTitleView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func titleViewScrollToIndex(index : Int) {
+        
+        if index == currentLabel?.tag {
+            return
+        }
+        
+        let label = titleLabels[index]
+        
+        label.textColor = style.titleSelecteColor
+        
+        currentLabel?.textColor = style.titleColor
+        currentLabel = label
+        
+        var offsetX = label.center.x - bounds.width * 0.5
+        if offsetX < 0 {
+            offsetX = 0
+        }
+        
+        let maxOffset = scrollView.contentSize.width - bounds.width
+        if offsetX > maxOffset {
+            offsetX = maxOffset
+        }
+        
+        scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
     }
 }
 
@@ -81,8 +114,17 @@ extension HJTitleView {
             label.textAlignment = .center
             label.font = UIFont.systemFont(ofSize: style.titleFontSize)
             label.textColor = style.titleColor
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer.init(target: self, action: #selector(titleViewTapEvent(tapGesture:)))
+            label.addGestureRecognizer(tapGes)
             scrollView.addSubview(label)
             label.tag = i
+            
+            if i == 0 {
+                label.textColor = style.titleSelecteColor
+                currentLabel = label
+            }
+ 
             titleLabels.append(label)
         }
     }
@@ -90,7 +132,7 @@ extension HJTitleView {
     private func setTitleLabelFrame() {
         
         var titleW: CGFloat = frame.size.width / CGFloat(titles.count)
-        let titleH: CGFloat = frame.size.height
+        let titleH: CGFloat = frame.height
         var titleX: CGFloat = 0
         let titleY: CGFloat = 0
     
@@ -118,6 +160,30 @@ extension HJTitleView {
         if style.isScrollEnable {
             scrollView.contentSize = CGSize(width: (titleLabels.last?.frame.maxX)! + style.titleMargin * 0.5, height: 0)
         }
+    }
+}
+
+//MARK: 标题label点击事件
+extension HJTitleView {
+    @objc func titleViewTapEvent(tapGesture : UITapGestureRecognizer) {
+        let label : UILabel = tapGesture.view as! UILabel
+        label.textColor = style.titleSelecteColor
         
+        currentLabel?.textColor = style.titleColor
+        currentLabel = label
+        
+        var offsetX = label.center.x - bounds.width * 0.5
+        if offsetX < 0 {
+            offsetX = 0
+        }
+        
+        let maxOffset = scrollView.contentSize.width - bounds.width
+        if offsetX > maxOffset {
+            offsetX = maxOffset
+        }
+        
+        scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        
+        delegate?.titleViewDidScrolled(index: (label.tag))
     }
 }

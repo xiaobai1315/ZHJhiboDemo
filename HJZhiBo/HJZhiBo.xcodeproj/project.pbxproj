@@ -24,6 +24,8 @@
 		AF9689A621246EB1001661CC /* HJPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A521246EB1001661CC /* HJPageView.swift */; };
 		AF9689A821246EC3001661CC /* HJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A721246EC3001661CC /* HJTitleView.swift */; };
 		AF9689AA21246ECB001661CC /* HJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A921246ECB001661CC /* HJContentView.swift */; };
+		AF9689AC21272425001661CC /* LiveCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689AB21272425001661CC /* LiveCollectionViewController.swift */; };
+		AF9689AE212727F1001661CC /* HJWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689AD212727F1001661CC /* HJWaterFallLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		AF9689A521246EB1001661CC /* HJPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPageView.swift; sourceTree = "<group>"; };
 		AF9689A721246EC3001661CC /* HJTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTitleView.swift; sourceTree = "<group>"; };
 		AF9689A921246ECB001661CC /* HJContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJContentView.swift; sourceTree = "<group>"; };
+		AF9689AB21272425001661CC /* LiveCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCollectionViewController.swift; sourceTree = "<group>"; };
+		AF9689AD212727F1001661CC /* HJWaterFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJWaterFallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				4A37296C2122776A00F9C572 /* HomeViewController.swift */,
+				AF9689AB21272425001661CC /* LiveCollectionViewController.swift */,
+				AF9689AD212727F1001661CC /* HJWaterFallLayout.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -353,7 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9689AC21272425001661CC /* LiveCollectionViewController.swift in Sources */,
 				4A37296F2122777100F9C572 /* RankViewController.swift in Sources */,
+				AF9689AE212727F1001661CC /* HJWaterFallLayout.swift in Sources */,
 				4A37293921226A5800F9C572 /* ViewController.swift in Sources */,
 				4A37293721226A5800F9C572 /* AppDelegate.swift in Sources */,
 				4A37297A21229CF000F9C572 /* UIColor+Extension.swift in Sources */,

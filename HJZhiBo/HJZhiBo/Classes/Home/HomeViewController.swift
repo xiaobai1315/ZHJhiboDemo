@@ -34,14 +34,20 @@ class HomeViewController: UIViewController {
         
         let pageViewFrame = CGRect(x: 0, y: 64, width: self.view.frame.width, height: self.view.frame.height - 64)
 //        let titles = ["音乐", "电影", "电视剧", "专题"]
-        let titles = ["音乐音乐", "电影音乐音乐", "电视剧", "专题音乐", "音乐音乐", "电影音乐音乐", "电视剧", "专题音乐"]
+//        let titles = ["音乐音乐", "电影音乐音乐", "电视剧", "专题音乐", "音乐音乐", "电影音乐音乐", "电视剧", "专题音乐"]
+        let titles = ["音乐音乐"]
         
-        var viewControllers: [UIViewController] = [UIViewController]()
-        for i in 0..<titles.count {
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = UIColor.randomColor()
-            viewControllers.append(viewController)
-        }
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        let itemW = (view.frame.width - CGFloat(30)) * 0.5
+        layout.itemSize = CGSize(width: itemW, height: CGFloat(arc4random_uniform(50) + 100))
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        
+        let liveVC = LiveCollectionViewController(collectionViewLayout: layout)
+        
+        let viewControllers = [liveVC]
         let pageView = HJPageView(frame: pageViewFrame, titles: titles, subViewControllers: viewControllers, parentViewController: self)
         self.view.addSubview(pageView)
     }

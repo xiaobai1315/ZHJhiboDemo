@@ -14,12 +14,30 @@ class HJPageView: UIView {
     private var subViewControllers: [UIViewController] = [UIViewController]()
     private var parentViewController: UIViewController = UIViewController()
     
+    private lazy var conetntView : HJContentView = {
+        let contentViewFrame = CGRect(x: 0, y: 40, width: frame.size.width, height: frame.size.height - 40)
+        let _contentView = HJContentView(frame: contentViewFrame, subViewControllers: subViewControllers, parentViewController: parentViewController)
+        _contentView.delegate = self
+        return _contentView
+    }()
+    
+    private lazy var titleView : HJTitleView = {
+        let titleFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: 40)
+        let style = HJTitleViewStyle()
+        style.isScrollEnable = true
+        style.titleColor = .green
+        style.titleSelecteColor = .red
+        let titleView = HJTitleView(frame: titleFrame, titles: titles, style: style)
+        titleView.delegate = self
+        return titleView
+    }()
+    
     init(frame: CGRect, titles: [String], subViewControllers: [UIViewController], parentViewController: UIViewController) {
         super.init(frame: frame)
         self.titles = titles
         self.subViewControllers = subViewControllers
         self.parentViewController = parentViewController
-        
+        parentViewController.automaticallyAdjustsScrollViewInsets = false
         setupTitleView()
         setupContentView()
     }
@@ -32,18 +50,24 @@ class HJPageView: UIView {
 extension HJPageView {
     
     func setupTitleView() {
-        let titleFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: 40)
-        let style = HJTitleViewStyle()
-        style.isScrollEnable = true
-        style.titleColor = .green
-        style.titleSelecteColor = .red
-        let titleView = HJTitleView(frame: titleFrame, titles: titles, style: style)
+        
         self.addSubview(titleView)
     }
     
     func setupContentView() {
-        let contentViewFrame = CGRect(x: 0, y: 40, width: frame.size.width, height: frame.size.height - 40)
-        let conetntView = HJContentView(frame: contentViewFrame, subViewControllers: subViewControllers, parentViewController: parentViewController)
+        
         self.addSubview(conetntView)
+    }
+}
+
+extension HJPageView : HJTitleViewDelegate{
+    func titleViewDidScrolled(index: Int) {
+        self.conetntView.contentViewScrollToIndex(index: index)
+    }
+}
+
+extension HJPageView : HJContentViewDelegate {
+    func contentViewDidScrollToIndex(index: Int) {
+        self.titleView.titleViewScrollToIndex(index: index)
     }
 }
