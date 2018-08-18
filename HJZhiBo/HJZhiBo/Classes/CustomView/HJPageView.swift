@@ -15,7 +15,7 @@ class HJPageView: UIView {
     private var parentViewController: UIViewController = UIViewController()
     
     private lazy var conetntView : HJContentView = {
-        let contentViewFrame = CGRect(x: 0, y: 40, width: frame.size.width, height: frame.size.height - 40)
+        let contentViewFrame = CGRect(x: 0, y: 40, width: frame.size.width, height: frame.size.height - 40 - 46)
         let _contentView = HJContentView(frame: contentViewFrame, subViewControllers: subViewControllers, parentViewController: parentViewController)
         _contentView.delegate = self
         return _contentView

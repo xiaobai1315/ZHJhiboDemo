@@ -10,10 +10,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    //测试数据
+    private lazy var dataArray : [CGFloat] = {
+        var array : [CGFloat] = [CGFloat]()
+        for i in 0 ..< 50 {
+            let height = arc4random() % 100 + 150
+            array.append(CGFloat(height))
+        }
+        
+        return array
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        
     }
     
     func setupUI() {
@@ -37,19 +49,28 @@ class HomeViewController: UIViewController {
 //        let titles = ["音乐音乐", "电影音乐音乐", "电视剧", "专题音乐", "音乐音乐", "电影音乐音乐", "电视剧", "专题音乐"]
         let titles = ["音乐音乐"]
         
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
-        let itemW = (view.frame.width - CGFloat(30)) * 0.5
-        layout.itemSize = CGSize(width: itemW, height: CGFloat(arc4random_uniform(50) + 100))
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10)
+//        let layout = UICollectionViewFlowLayout()
+//        layout.minimumLineSpacing = 10
+//        layout.minimumInteritemSpacing = 10
+//        let itemW = (view.frame.width - CGFloat(30)) * 0.5
+//        layout.itemSize = CGSize(width: itemW, height: CGFloat(arc4random_uniform(50) + 100))
+//        layout.scrollDirection = .vertical
+//        layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        
+        let layout = HJWaterFallLayout()
+        layout.delegate = self
         
         let liveVC = LiveCollectionViewController(collectionViewLayout: layout)
         
         let viewControllers = [liveVC]
         let pageView = HJPageView(frame: pageViewFrame, titles: titles, subViewControllers: viewControllers, parentViewController: self)
         self.view.addSubview(pageView)
+    }
+}
+
+extension HomeViewController : HJWaterFallLayoutDelegate {
+    func HJWaterFallLayoutHeightForItemAtIndexPath(indexPath: IndexPath) -> CGFloat {
+        return dataArray[indexPath.item]
     }
 }
 

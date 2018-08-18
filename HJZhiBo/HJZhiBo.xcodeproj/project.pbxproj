@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3204F24B9612BD32A32CB808 /* Pods_HJZhiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA24EA32A5CF6AB4B5857B /* Pods_HJZhiBo.framework */; };
 		4A37293721226A5800F9C572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37293621226A5800F9C572 /* AppDelegate.swift */; };
 		4A37293921226A5800F9C572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37293821226A5800F9C572 /* ViewController.swift */; };
 		4A37293C21226A5800F9C572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A37293A21226A5800F9C572 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		4A3729732122778400F9C572 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3729722122778400F9C572 /* ProfileViewController.swift */; };
 		4A37297521227DBE00F9C572 /* HJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37297421227DBE00F9C572 /* HJNavigationController.swift */; };
 		4A37297A21229CF000F9C572 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37297921229CF000F9C572 /* UIColor+Extension.swift */; };
+		4AAF9D9021280A7B00B22789 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF9D8F21280A7B00B22789 /* 1.plist */; };
 		AF9689A621246EB1001661CC /* HJPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A521246EB1001661CC /* HJPageView.swift */; };
 		AF9689A821246EC3001661CC /* HJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A721246EC3001661CC /* HJTitleView.swift */; };
 		AF9689AA21246ECB001661CC /* HJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9689A921246ECB001661CC /* HJContentView.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24D4FD83DA50D6A7EE2ED77A /* Pods-HJZhiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJZhiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HJZhiBo/Pods-HJZhiBo.release.xcconfig"; sourceTree = "<group>"; };
 		4A37293321226A5800F9C572 /* HJZhiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJZhiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A37293621226A5800F9C572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A37293821226A5800F9C572 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +69,14 @@
 		4A3729722122778400F9C572 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A37297421227DBE00F9C572 /* HJNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJNavigationController.swift; sourceTree = "<group>"; };
 		4A37297921229CF000F9C572 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4AAF9D8F21280A7B00B22789 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		65AA24EA32A5CF6AB4B5857B /* Pods_HJZhiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJZhiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9689A521246EB1001661CC /* HJPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPageView.swift; sourceTree = "<group>"; };
 		AF9689A721246EC3001661CC /* HJTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTitleView.swift; sourceTree = "<group>"; };
 		AF9689A921246ECB001661CC /* HJContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJContentView.swift; sourceTree = "<group>"; };
 		AF9689AB21272425001661CC /* LiveCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCollectionViewController.swift; sourceTree = "<group>"; };
 		AF9689AD212727F1001661CC /* HJWaterFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJWaterFallLayout.swift; sourceTree = "<group>"; };
+		E62644D501247295D7E02EC2 /* Pods-HJZhiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJZhiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HJZhiBo/Pods-HJZhiBo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3204F24B9612BD32A32CB808 /* Pods_HJZhiBo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C878DF3C5C1C68AEE9396A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E62644D501247295D7E02EC2 /* Pods-HJZhiBo.debug.xcconfig */,
+				24D4FD83DA50D6A7EE2ED77A /* Pods-HJZhiBo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4A37292A21226A5700F9C572 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +121,8 @@
 				4A37294A21226A5800F9C572 /* HJZhiBoTests */,
 				4A37295521226A5900F9C572 /* HJZhiBoUITests */,
 				4A37293421226A5800F9C572 /* Products */,
+				0C878DF3C5C1C68AEE9396A5 /* Pods */,
+				D960B81B4348E4CA321D9426 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +142,7 @@
 				4A3729652122764E00F9C572 /* Classes */,
 				4A37293621226A5800F9C572 /* AppDelegate.swift */,
 				4A37293821226A5800F9C572 /* ViewController.swift */,
+				4AAF9D8F21280A7B00B22789 /* 1.plist */,
 				4A37293A21226A5800F9C572 /* Main.storyboard */,
 				4A37293D21226A5800F9C572 /* Assets.xcassets */,
 				4A37293F21226A5800F9C572 /* LaunchScreen.storyboard */,
@@ -225,6 +244,14 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		D960B81B4348E4CA321D9426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65AA24EA32A5CF6AB4B5857B /* Pods_HJZhiBo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A37295B21226A5A00F9C572 /* Build configuration list for PBXNativeTarget "HJZhiBo" */;
 			buildPhases = (
+				06B5E26AF36799167EFCC8EC /* [CP] Check Pods Manifest.lock */,
 				4A37292F21226A5800F9C572 /* Sources */,
 				4A37293021226A5800F9C572 /* Frameworks */,
 				4A37293121226A5800F9C572 /* Resources */,
+				AC78EEE6D3F4291A205A8252 /* [CP] Embed Pods Frameworks */,
+				196414AB1DB6E8CC8021303A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,6 +364,7 @@
 			files = (
 				4A37294121226A5800F9C572 /* LaunchScreen.storyboard in Resources */,
 				4A37293E21226A5800F9C572 /* Assets.xcassets in Resources */,
+				4AAF9D9021280A7B00B22789 /* 1.plist in Resources */,
 				4A37293C21226A5800F9C572 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +384,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06B5E26AF36799167EFCC8EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		196414AB1DB6E8CC8021303A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HJZhiBo/Pods-HJZhiBo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC78EEE6D3F4291A205A8252 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HJZhiBo/Pods-HJZhiBo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A37292F21226A5800F9C572 /* Sources */ = {
@@ -536,12 +615,13 @@
 		};
 		4A37295C21226A5A00F9C572 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62644D501247295D7E02EC2 /* Pods-HJZhiBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
 				INFOPLIST_FILE = HJZhiBo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.HJZhiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,12 +632,13 @@
 		};
 		4A37295D21226A5A00F9C572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D4FD83DA50D6A7EE2ED77A /* Pods-HJZhiBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S47T4UESP3;
 				INFOPLIST_FILE = HJZhiBo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.HJZhiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
